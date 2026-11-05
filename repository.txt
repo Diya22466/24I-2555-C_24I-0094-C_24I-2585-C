@@ -1,0 +1,4 @@
+GitHub repository: TO BE ADDED (https://github.com/<owner>/<RollNoSection1_RollNoSection2_RollNoSection3>)
+
+The private repository must be named like the ZIP, have the course staff as
+collaborators, and each member must commit their own work from their own account.
