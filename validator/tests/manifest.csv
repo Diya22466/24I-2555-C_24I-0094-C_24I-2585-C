@@ -1,0 +1,30 @@
+file,mode,expected,description
+broken_full_01_windows_copied_between_cases.xlsx,full,V7,full workbook; case 40-27 has the same windows as 40-21 (variety rule 4)
+valid_40-00.xlsx,subset,ACCEPT,unchanged copy of case 40-00
+broken_40-00_01_crate_weight_25.xlsx,subset,V2,crate weight 25 kg (allowed 1..20)
+broken_40-00_02_duplicate_crate_id.xlsx,subset,V3,two crates share crate_id
+broken_40-00_03_road_to_missing_location.xlsx,subset,V3,a road ends at a location that does not exist
+broken_40-00_04_road_closed_twice.xlsx,subset,V4,one road appears in two waves (waves not disjoint)
+broken_40-00_05_disconnect_last_location.xlsx,subset,V4,all roads of the last location removed (network not connected)
+broken_40-00_06_wrong_pattern_count.xlsx,subset,V5,pattern 0 count increased by 1
+broken_40-00_07_wrong_cargo_claim.xlsx,subset,V5,claim cargo_opt increased by 1
+broken_40-00_08_edit_bound_below_distance.xlsx,subset,V5,edit_bound 1 although report_b needs 3 edits
+broken_40-00_09_assignment_breaks_rule.xlsx,subset,V6,planted safety assignment makes rule 1 false
+broken_40-00_10_tour_length_plus_7.xlsx,subset,V6,tour_length does not match the planted tour
+broken_40-00_11_delta_no_flooding.xlsx,subset,V7,Delta Flood signature broken: no location has penalty >= 2
+broken_40-00_12_header_renamed.xlsx,subset,V1,crates header 'weight' renamed to 'kg'
+valid_40-04.xlsx,subset,ACCEPT,unchanged copy of case 40-04
+broken_40-04_01_window_500_minutes.xlsx,subset,V2,a window lasts 500 minutes (allowed 5..480)
+broken_40-04_02_lowercase_in_log.xlsx,subset,V2,radio log contains a lowercase symbol
+broken_40-04_03_cover_node_missing.xlsx,subset,V3,a cover node does not exist in the sensor graph
+broken_40-04_04_wave_too_large.xlsx,subset,V4,"wave 1 has more than max(1, floor(E/4)) roads"
+broken_40-04_05_edit_bound_too_large.xlsx,subset,V5,edit_bound larger than len(report_a) + len(report_b)
+broken_40-04_06_ration_flag_flipped.xlsx,subset,V6,planted rations no longer add up to rations_target
+broken_40-04_07_landslide_hq_five_roads.xlsx,subset,V7,Landslide signature broken: HQ gets 5 roads
+broken_40-04_08_sheets_swapped.xlsx,subset,V1,sheets 'sites' and 'tour' swapped
+valid_40-47.xlsx,subset,ACCEPT,unchanged copy of case 40-47
+broken_40-47_01_trap47_decoy_weakened.xlsx,subset,V8,trap 47 broken: the decoy crate loses its high value per kg
+broken_40-47_02_trap47_too_many_crates.xlsx,subset,V8,trap 47 broken: 67 crates (allowed 12..60)
+broken_40-47_03_tour_not_better_than_nn.xlsx,subset,V6,tier X tour longer than the nearest-neighbour tour
+broken_40-47_04_all_alarms_at_tick_0.xlsx,subset,V2,all alarms at tick 0 (alarms per tick far above 1.8)
+broken_40-47_05_too_few_safety_rules.xlsx,subset,V2,only 1 safety rule per switch (allowed 2.0..6.0)
